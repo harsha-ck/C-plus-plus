@@ -39,3 +39,33 @@ int main()
     }
     return 0;
 }
+//linear search
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5];
+    int key;
+    bool found = false;
+    cout << "Enter the 5 elements:";
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "Enter the element to search:";
+    cin >> key;
+    for (int i = 0; i < 5; i++)
+    {
+        if (arr[i] == key)
+        {
+            cout << "Element found at index:" << i;
+            found = true;
+        }
+    }
+    if (!found)
+    {
+        cout << "Element not found!";
+    }
+
+    return 0;
+}
