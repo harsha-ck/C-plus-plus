@@ -152,3 +152,31 @@ int main()
     cout << "Odd count:" << count2;
     return 0;
 }
+
+//second largest element
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[] = {30, 10, 20, 40};
+    int temp;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int largest = arr[0];
+    int second_largest = arr[0];
+
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] > largest)
+        {
+            second_largest = largest;
+            largest = arr[i];
+        }
+        else if (arr[i] > second_largest && arr[i] != largest)
+        {
+            second_largest = arr[i];
+        }
+    }
+    cout << "Second largest element:" << second_largest;
+
+    return 0;
+}
