@@ -87,3 +87,21 @@ int main()
     cout << largest;
     return 0;
 }
+
+//smallest element
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5] = {0, 2, 9, -1, 8};
+    int smallest = arr[0];
+    for (int i = 0; i < 5; i++)
+    {
+        if (arr[i] < smallest)
+        {
+            smallest = arr[i];
+        }
+    }
+    cout << smallest;
+    return 0;
+}
