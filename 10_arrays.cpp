@@ -180,3 +180,34 @@ int main()
 
     return 0;
 }
+
+//remove duplicate
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[] = {1, 0, 4, 1, 3, 1, 2};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < n; i++)
+    {
+        int temp = arr[i];
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[j] == temp)
+            {
+                for (int k = j; k < n - 1; k++)
+                {
+                    arr[k] = arr[k + 1];
+                }
+                n--;
+                j--;
+            }
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+
