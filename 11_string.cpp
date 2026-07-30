@@ -105,5 +105,28 @@ int main()
     return 0;
 }
 
+//number of words count
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s;
+    cout << "Enter a sentence:";
+    getline(cin, s);
+    int words = 1;
+    for (int i = 0; i < s.length(); i++)
+    {
+
+        if (s[i] == ' ')
+        {
+            words++;
+        }
+    }
+    cout << "Number of words in a sentence:" << words;
+    return 0;
+}
+
+
 
 
