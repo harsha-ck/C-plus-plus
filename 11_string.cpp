@@ -87,4 +87,23 @@ int main()
     return 0;
 }
 
+//convert uppercase to lowercase
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+int main()
+{
+    string s;
+    cout << "Enter a string:";
+    getline(cin, s);
+    for (int i = 0; i < s.length(); i++)
+    {
+        char ch = tolower(s[i]);
+        cout << ch;
+    }
+    return 0;
+}
+
+
 
