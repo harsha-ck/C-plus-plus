@@ -127,6 +127,35 @@ int main()
     return 0;
 }
 
+//remove spaces
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s;
+    cout << "Enter a sentence:";
+    getline(cin, s);
+    
+    for (int i = 0; i < s.length(); i++)
+    {
+
+        if (s[i] == ' ')
+        {
+            for (int j = i; j < s.length() - 1; j++)
+            {
+                s[j] = s[j + 1];
+            }
+            s.pop_back();
+            i--;
+        }
+    }
+    cout << "Sentence after removing spaces:" << s;
+
+    return 0;
+}
+
+
 
 
 
