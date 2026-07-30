@@ -45,3 +45,29 @@ int main()
     return 0;
 }
 
+//palindrome check
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s1;
+    string s2;
+    cout << "Enter a string:";
+    getline(cin, s1);
+    for (int i = s1.length() - 1; i >= 0; i--)
+    {
+        s2.push_back(s1[i]);
+    }
+    if (s1 == s2)
+    {
+        cout << "It's palindrome!";
+    }
+    else
+    {
+        cout << "It's not a palindrome!";
+    }
+    return 0;
+}
+
+
