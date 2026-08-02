@@ -180,6 +180,56 @@ int main()
 }
 
 
+// anagrams
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s1;
+    string s2;
+    bool result1 = false;
+    bool result2 = true;
+    cout << "enter a string 1:";
+    getline(cin, s1);
+    cout << "enter a string 2:";
+    getline(cin, s2);
+    int freq1[256] = {0};
+    for (int i = 0; i < s1.length(); i++)
+    {
+        freq1[s1[i]]++;
+    }
+    int freq2[256] = {0};
+    for (int i = 0; i < s2.length(); i++)
+    {
+        freq2[s2[i]]++;
+    }
+    if (s1.length() == s2.length())
+    {
+        result1 = true;
+        for (int i = 0; i < 256; i++)
+        {
+            if (freq1[i]!=freq2[i])
+            {
+                result2 = false;
+                break;
+            }
+        }
+    }
+    if (result1 == true && result2 == true)
+    {
+        cout << "They are anagrams!";
+    }
+    else
+    {
+        cout << "they are not anagrams!";
+    }
+
+    return 0;
+}
+
+
+
 
 
 
