@@ -155,6 +155,31 @@ int main()
     return 0;
 }
 
+// frequency count
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string s;
+    cout << "enter a string:";
+    getline(cin, s);
+    int freq[256] = {0};
+    for (int i = 0; i < s.length(); i++)
+    {
+        freq[s[i]]++;
+    }
+    for (int i = 0; i < 256; i++)
+    {
+        if (freq[i] > 0)
+        {
+            cout << " " << char(i) << ":" << freq[i] << endl;
+        }
+    }
+    return 0;
+}
+
+
 
 
 
